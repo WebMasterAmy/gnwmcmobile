@@ -1,0 +1,10 @@
+#header {
+	background-image: url(../images/header_background.jpg);
+	background-repeat: no-repeat;
+	height: 75px;
+}
+#logo {
+	background-image: url(../images/GNWM_logo.png);
+	background-repeat: no-repeat;
+	height: 50px;
+}
