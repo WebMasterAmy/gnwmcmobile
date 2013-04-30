@@ -2,6 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<link href="jqm-icon-pack-3.0.0-fa.css" rel="stylesheet" type="text/css" />
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
 <link href="css/jquery.mobile-1.3.1.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.3.1.js"></script>
@@ -10,11 +13,50 @@
 </head>
 
 <body>
-<div data-role="header" data-backbtn="false" id="header">      
+<div data-role="page" id="home">
+<footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+            <a href="https://www.facebook.com/pages/Great-Northwest-Music/128631783856803?fref=ts" rel="external" data-role="button" data-inline="true" data-icon="facebook">Facebook</a>
+        </footer>
+</div><!-- end page -->
+<div id="phone" data-role="page">
+        <div data-role="header">
+            <h1><a href="tel:15417611893">541-956-8600</a></h1>
+        </div>
+</div>
+<div id="contact" data-role="page">
+        <div data-role="header">
+            <h1>Send Us a Message</h1>
+        </div>
+        <div data-role="content">
+        <form method="get" action="">
+            <fieldset>
+    		    <label for="name">Your Name:</label>
+			    <input type="text" name="name" id="name" value="" placeholder="Your Name"/>
+                <label for="phone">Phone Number:</label>
+			    <input type="tel" name="phone" id="phone" value="" placeholder="Your Phone Number"/>
+			    <label for="email">Your email: </label>
+			    <input type="email" name="email" id="email" value="" placeholder="Your Email"/>
             
-<div id="logo"></div>
-		              
-        </div><!-- /header -->
-
+			    <label for="message">How can we help you?</label>
+            	<textarea id="message"></textarea>
+                <input type="submit" value="Submit" data-inline="true">
+                </fieldset>
+        </form>
+        </div>
+        <div data-role="footer">We are happy to hear from you.</div>
+    </div>
+<div id="Map" data-role="page">
+<div data-role="header">
+            <h1>220 SW G ST<br />
+            Grants Pass, OR 97526</h1>
+        </div>
+    <div data-role="content">
+        <a href="http://maps.google.com/maps?rlz=1C1CHFX_enUS529US529&q=220+SW+G+Street+Grants+Pass,+OR+97526&um=1&ie=UTF-8&hq=&hnear=0x54c57a3b12d2f7e9:0xcfea777db4a85227,220+SW+G+St,+Grants+Pass,+OR+97526&gl=us&sa=X&ei=LB5_Ub-2Eo6PigLG7YGABA&ved=0CDAQ8gEwAA" rel="external"><img id="Map" src="https://maps.googleapis.com/maps/api/staticmap?center=220 SW G St, Grants Pass, OR&amp;zoom=15&amp;size=288x200&amp;markers=220 SW G St, Grants Pass, OR&amp;sensor=false"
+        width="288" height="200"></a></div>
+        <div data-role="footer">Monday-Thursday: 10:00-6:00 | Friday: 12:00-6:00 | Saturday: 9:00-1:00 | Sunday: Closed</div>
+   </div> 
 </body>
 </html>
