@@ -1,0 +1,298 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrapper {
+width: 971px;
+   margin-right: auto;
+margin-left: auto;
+}
+
+#wrapper p {
+font-family: UglyQua;
+font-size: 11px;
+font-weight: bold;
+}
+
+/* header */
+
+#header {
+background-image: url(images/header_background.jpg);
+float: left;
+height: 209px;
+width: 100%;
+background-repeat: no-repeat;
+}
+
+#loginMenu {
+position: relative;
+top: 34%;
+height:138px;
+margin-left: 65.2%;
+background-image: url(images/login_image.png);
+background-repeat: no-repeat;
+}
+
+/* Navigation */
+
+#nav {
+height: 33px;
+width: 100%;
+background-color: #00480a;
+float: left;
+}
+
+#nav a {
+padding-right: 30px;
+text-decoration:none;
+font-family: BoltonElongated;
+color: #edd68b;
+font-size: 25px;
+position: relative;
+float: right;
+top: 9%;
+}
+
+/* the two strips on the sides and logo */
+
+#leftsideframe {
+position: relative;
+height: 855px;
+width: 32px;
+background-image: url(images/leftside_body.jpg);
+float: left;
+}
+
+#logo {
+z-index: 1;
+margin-left: 2.2%;
+margin-top: -12.7%;
+float: left;
+height: 180px;
+width: 360px;
+background-image: url(images/GNWM_logo.png);
+}	
+
+#rightsideframe {
+position: relative;
+height: 855px;
+width: 32px;
+background-image: url(images/rightside_body.jpg);
+float: right;
+}
+
+/* Right sidebar Window */
+
+#rightsidebar {
+width: 256px;
+height: 832px;
+float: right;
+border-left-style: solid;
+border-left-width: 2px;
+border-left-color: #00480a;
+background-image: url(images/sidebar_background.jpg);
+}
+
+#calendarImage {
+margin-top: 12%;
+margin-left: 3%;
+width: 216px;
+height: 129px;
+background-image: url(images/calendar_heading.png);
+}
+
+#calendar {
+padding-left: 2%;
+width: 80%;
+margin-top: -20%;
+margin-left: 12%;
+border-left-style: solid;
+border-left-color: #00480a;
+border-left-width: 2px;
+}
+
+#calendar p {
+margin-bottom: 0; 
+padding-bottom: 0;
+margin-top: 0;
+padding-top: 0;
+}
+
+#calendar h3 {
+margin-bottom: 0; 
+padding-bottom: 0;
+margin-top: 10%;
+padding-top: 0;
+color: #00480a;
+font-family: UglyQua;
+font-size: 13px;
+}
+
+#calendar a {
+color: #00480a;
+text-decoration: none;
+font-family: UglyQua;
+font-weight: bold;
+}
+
+#facebookLink {
+position: relative;
+float: right;
+margin-top: 40%;
+margin-right: 5%;
+height: 46px;
+width: 150px;
+background-image: url(images/facebook_logo.png);
+}
+
+/* Main Content Window */
+
+#homeContent {
+z-index: -1;
+position: relative;
+margin-top: -5.8%;
+width: 649px;
+height: 832px;
+float: left;
+background-color: #e9dcba;
+}
+
+#topflair {
+
+margin-top: 8%;
+margin-left: 2%;
+height: 57px;
+width: 134px;
+background-image: url(images/topflair_image.png);
+background-repeat: no-repeat;
+}
+
+#toprule {
+margin-top: -8.2%;
+margin-left: 6.9%;
+}
+
+#upperTextPane {
+width: 400px;
+margin-left: 22.5%;
+float: none;
+}
+
+#upperTextPane p {
+text-align: left;
+color: #6c5e44;
+font-size: 14px;
+}
+
+#upperTextPane a {
+text-decoration:none;
+font-weight: bold;
+color: #00480a;
+font-size: 14px;
+}
+
+#bottomrule {
+margin-top: 2.5%;
+margin-right: .7%;
+}
+
+#bottomflair {
+
+margin-top: -3.5%;
+margin-left: 76.5%;
+height: 57px;
+width: 134px;
+background-image: url(images/bottomflair_image.png);
+background-repeat: no-repeat;
+}
+
+#slideshowframe {
+transform:rotate(-12deg);
+-ms-transform:rotate(-12deg); /* IE 9 */
+-webkit-transform:rotate(-12deg); /* Safari and Chrome */
+margin-left: 4%;
+margin-top: -5%;
+float: left;
+width: 305px;
+height: 332px;
+background-image: url(images/polaroid_image.png);
+background-repeat: no-repeat;
+}
+
+#slideshow {
+
+}
+
+#map {
+margin-top: 38%;
+width: 648px;
+height: 362px;
+background-image: url(images/bodymap_image.jpg);
+background-repeat: no-repeat;
+}
+
+#topCurl {
+margin-right: 4%;
+float: right;
+width:272px;
+height:67px;
+background-image: url(images/top_textbar_image.png);
+}
+
+#lowerTextPane {
+margin-right: 5.7%;
+float: right;
+background-color: #ececda;
+width: 250px;
+height: 375px;
+}
+
+#lowerTextPane p {
+margin-top: 3%;
+margin-left: 4%;
+margin-right: 4%;
+color: #6c5e44;
+font-size: 14px;
+}
+
+#lowerTextPane a {
+font-family: UglyQua;
+color: #00480a;
+text-decoration: none;
+font-size: 14px;
+}
+
+#bottomCurl {
+margin-right: 4%;
+margin-top: -25.8%;
+float: right;
+width:272px;
+height:67px;
+background-image: url(images/bottom_textbar_image.png);
+}
+
+/* footer */
+
+#footer {
+background-color: #00480a;
+height: 23px;
+width: 907px;
+float: left;
+text-align: center;
+}
+
+#footer a {
+color: #dda619;
+font-style: italic;
+text-decoration:none;
+font-weight: bold;
+}
+
+#footer p {
+font-size: 14px;
+font-weight: lighter;
+margin-top: 2px;
+margin-bottom: 0;
+padding-top: 0;
+padding-bottom: 0;
+color: #edd68b;
+}
