@@ -1,2 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
+body .ui-footer .ui-header {
+ white-space: normal;
+ }#FAQ div h1 {
+	white-space: normal;
+}
