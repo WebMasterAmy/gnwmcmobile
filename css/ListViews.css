@@ -27,6 +27,9 @@
 	background-image: none;
 	border-color: #222;
 }
+#FAQ div ul li a h2 {
+	white-space: normal;
+}
 
 /* First breakpoint is 768px. 3 column layout. Tiles 250x250 pixels at the breakpoint. */
 @media all and (min-width: 768px){
