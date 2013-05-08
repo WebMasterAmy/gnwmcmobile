@@ -5,3 +5,28 @@ body .ui-footer .ui-header {
  }#FAQ div h1 {
 	white-space: normal;
 }
+h2#banner {
+	margin-right: auto;
+	margin-left: auto;
+	width: 200px;
+	text-indent:-9999px;
+	background-color: transparent;
+	background-image: url(../images/GNWM_logo200.png);
+	background-repeat: no-repeat;
+	background-position: left 10px;
+	height: 120px;
+}
+.landscape h2#banner {
+	width:362px;
+	height:182px;
+	text-indent:-9999px;
+	background-color: transparent;
+	background-image: url(../images/GNWM_logo.png);
+	background-repeat: no-repeat;
+	background-position: left 10px;
+	margin-top: -10px;
+	margin-right: auto;
+	margin-bottom: -175px;
+	margin-left: auto;
+}
+

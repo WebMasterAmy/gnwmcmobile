@@ -29,6 +29,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /*  Font Awesome styles
     ------------------------------------------------------- */
 [class^="icon-"],
@@ -46,6 +47,7 @@
   line-height: normal;
   vertical-align: baseline;
   background-image: none;
+  background-color: transparent;
   background-position: 0% 0%;
   background-repeat: repeat;
   margin-top: 0;
@@ -65,6 +67,7 @@
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
   background-image: none;
+  
 }
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
@@ -144,7 +147,7 @@ ul.icons li [class*=" icon-"] {
   width: .75em;
 }
 .icon-muted {
-  color: #eeeeee;
+	color: #00480a;
 }
 .icon-border {
   border: solid 1px #eeeeee;
