@@ -54,17 +54,14 @@
 	border: 1px solid #00480a /*{a-body-border}*/;
 	color: #00480a /*{a-body-color}*/;
 	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #ffffff /*{a-body-shadow-color}*/;
-	background: #e9dcba /*{a-body-background-color}*/;
-	background-image: -webkit-gradient(linear, left top, left bottom, from( #FFFFe4 /*{a-body-background-start}*/), to( #b3a98f /*{a-body-background-end}*/)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient( #FFFFe4 /*{a-body-background-start}*/, #b3a98f /*{a-body-background-end}*/); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient( #FFFFe4 /*{a-body-background-start}*/, #b3a98f /*{a-body-background-end}*/); /* FF3.6 */
-	background-image:     -ms-linear-gradient( #FFFFe4 /*{a-body-background-start}*/, #b3a98f /*{a-body-background-end}*/); /* IE10 */
-	background-image:      -o-linear-gradient( #FFFFe4 /*{a-body-background-start}*/, #b3a98f /*{a-body-background-end}*/); /* Opera 11.10+ */
-	background-image:         linear-gradient( #FFFFe4 /*{a-body-background-start}*/, #b3a98f /*{a-body-background-end}*/);
+	background-color: transparent;
+	background-image: url(../images/sidebar_background_mobilep.jpg);
+	background-repeat: repeat-y;
 }
 .ui-overlay-a {
-	background-image: none;
-	border-width: 0;
+	background-color: transparent;
+	background-image: url(../images/sidebar_background_mobilep.jpg);
+	background-repeat: repeat-y;
 }
 .ui-body-a,
 .ui-body-a input,
