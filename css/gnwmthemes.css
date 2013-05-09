@@ -15,7 +15,6 @@
 -----------------------------------------------------------------------------------------------------------*/
 .ui-bar-a {
 	border: 1px solid #00480a /*{a-bar-border}*/;
-	background: #00480a /*{a-bar-background-color}*/;
 	color: #dda619 /*{a-bar-color}*/;
 	font-weight: bold;
 	text-shadow: 0 /*{a-bar-shadow-x}*/ 0px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #ffffff /*{a-bar-shadow-color}*/;
@@ -25,6 +24,7 @@
 	background-image:     -ms-linear-gradient( #00630d /*{a-bar-background-start}*/, #002c06 /*{a-bar-background-end}*/); /* IE10 */
 	background-image:      -o-linear-gradient( #00630d /*{a-bar-background-start}*/, #002c06 /*{a-bar-background-end}*/); /* Opera 11.10+ */
 	background-image:         linear-gradient( #00630d /*{a-bar-background-start}*/, #002c06 /*{a-bar-background-end}*/);
+	background-color: #00480a;
 }
 .ui-bar-a .ui-link-inherit {
 	color: #dda619 /*{a-bar-color}*/;
@@ -47,7 +47,7 @@
 .ui-bar-a select,
 .ui-bar-a textarea,
 .ui-bar-a button {
-	 font-family: TimesNewRoman, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: "Times New Roman", Times, serif /*{global-font-family}*/;
 }
 .ui-body-a,
 .ui-overlay-a {
@@ -55,12 +55,12 @@
 	color: #00480a /*{a-body-color}*/;
 	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #ffffff /*{a-body-shadow-color}*/;
 	background-color: transparent;
-	background-image: url(../images/sidebar_background_mobilep.jpg);
+	background-image: url(../images/sidebar_background_mobilepwide.jpg);
 	background-repeat: repeat-y;
 }
 .ui-overlay-a {
 	background-color: transparent;
-	background-image: url(../images/sidebar_background_mobilep.jpg);
+	background-image: url(../images/sidebar_background_mobilepwide.jpg);
 	background-repeat: repeat-y;
 }
 .ui-body-a,
@@ -68,7 +68,7 @@
 .ui-body-a select,
 .ui-body-a textarea,
 .ui-body-a button {
-	 font-family: TimesNewRoman, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: "Times New Roman", Times, serif /*{global-font-family}*/;
 }
 .ui-body-a .ui-link-inherit {
 	color: #00480a /*{a-body-color}*/;
@@ -142,7 +142,7 @@
 .ui-btn-up-a,
 .ui-btn-hover-a,
 .ui-btn-down-a {
-	 font-family: TimesNewRoman, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: "Times New Roman", Times, serif /*{global-font-family}*/;
 	text-decoration: none;
 }
 /* B
@@ -181,7 +181,7 @@
 .ui-bar-b select,
 .ui-bar-b textarea,
 .ui-bar-b button {
-	 font-family: TimesNewRoman, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: "Times New Roman", Times, serif /*{global-font-family}*/;
 }
 .ui-body-b,
 .ui-overlay-b {
@@ -205,7 +205,7 @@
 .ui-body-b select,
 .ui-body-b textarea,
 .ui-body-b button {
-	 font-family: TimesNewRoman, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: "Times New Roman", Times, serif /*{global-font-family}*/;
 }
 .ui-body-b .ui-link-inherit {
 	color: #ffffff /*{b-body-color}*/;
@@ -279,7 +279,7 @@
 .ui-btn-up-b,
 .ui-btn-hover-b,
 .ui-btn-down-b {
-	 font-family: TimesNewRoman, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: "Times New Roman", Times, serif /*{global-font-family}*/;
 	text-decoration: none;
 }
 
@@ -320,7 +320,7 @@
 .ui-bar-c select,
 .ui-bar-c textarea,
 .ui-bar-c button {
-	 font-family: TimesNewRoman, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: "Times New Roman", Times, serif /*{global-font-family}*/;
 }
 .ui-body-c,
 .ui-overlay-c {
@@ -344,7 +344,7 @@
 .ui-body-c select,
 .ui-body-c textarea,
 .ui-body-c button {
-	 font-family: TimesNewRoman, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: "Times New Roman", Times, serif/*{global-font-family}*/;
 }
 .ui-body-c .ui-link-inherit {
 	color: #333333 /*{c-body-color}*/;
@@ -418,7 +418,7 @@
 .ui-btn-up-c,
 .ui-btn-hover-c,
 .ui-btn-down-c {
-	 font-family: TimesNewRoman, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: "Times New Roman", Times, serif /*{global-font-family}*/;
 	text-decoration: none;
 }
 
@@ -445,7 +445,7 @@ a.ui-link-inherit {
 	background-image:     -ms-linear-gradient( #00640e /*{global-active-background-start}*/, #002b06 /*{global-active-background-end}*/); /* IE10 */
 	background-image:      -o-linear-gradient( #00640e /*{global-active-background-start}*/, #002b06 /*{global-active-background-end}*/); /* Opera 11.10+ */
 	background-image:         linear-gradient( #00640e /*{global-active-background-start}*/, #002b06 /*{global-active-background-end}*/);
-	 font-family: TimesNewRoman, Arial, sans-serif /*{global-font-family}*/;
+	 font-family: "Times New Roman", Times, serif /*{global-font-family}*/;
 }
 .ui-btn-active:visited,
 .ui-btn-active:hover,
@@ -547,7 +547,7 @@ a.ui-link-inherit {
 /* Overlay / modal
 -----------------------------------------------------------------------------------------------------------*/
 .ui-overlay {
-	background: #666;
+	background: #ffffff;
 	filter: Alpha(Opacity=50);
 	opacity: .5;
 	position: absolute;
