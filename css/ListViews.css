@@ -4,11 +4,13 @@
 /* A bit custom styling */
 .ListViews {
 	background: #222;
+	white-space: normal;
 }
 /* Link to the Google webfont is in the head */
 .ListViews .ui-title, .my-page .ui-li-aside {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
+	white-space: normal;
 }
 .ListViews .ui-header {
 	color: #CC9900;
@@ -16,9 +18,11 @@
 }
 .ListViews .ui-footer {
 	color: #666;
+	white-space: normal;
 }
 .ListViews .ui-li-desc {
 	color: #c0c0c0;
+	white-space: normal;
 }
 .ListViews .ui-li-aside {
 	color: #CC9900;
@@ -26,6 +30,7 @@
 .ListViews .ui-listview .ui-li.ui-btn {
 	background-image: none;
 	border-color: #222;
+	white-space: normal;
 }
 #FAQ div ul li a h2 {
 	white-space: normal;
@@ -183,5 +188,9 @@
 		margin: 10px 1%;
 	}
 }
-
-/* For this demo we used images with a size of 310x310 pixels. Just before the second breakpoint the images reach their max width: 1019px - 2 x 9px padding = 1001px x 30.9333% = ~310px */
+#Home div ul li a h2 {
+	white-space: normal;
+}
+#Lessons div ul li a h2 {
+	white-space: normal;
+}
