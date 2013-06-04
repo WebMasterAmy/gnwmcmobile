@@ -18,8 +18,12 @@
 
 <body>
 <section data-role="page" data-theme="a" id="Home" class="ListViews">
-	<header data-role="header"><a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext" data-rel="back"></a><a href="http://purpledragonwebdevelopment.com/TestingPlace/gnwmmobile/images/GNWMC.jpg" data-role="button" data-mini="true" data-inline="true" data-iconshadow="false" data-icon="share-alt">View full size site</a></header>
-	<h2 id="banner"><p>Great Nortwest Music</p></h2>
+<a href="../public/index.php" data-role="button" data-inline="true" data-mini="true" data-ajax="false">View Full Site</a>
+	<h2 id="banner"><p>Great Northwest Music</p></h2><!--Banner area for Logo -->
+    <header data-role="header"><h2></h2>
+    	<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+		<a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	  </header>
 	<!-- /header -->
 	<div data-role="content">
 	
@@ -34,17 +38,17 @@
             	<h2>Lessons</h2>
                 <p>We offer a variety of lessons, both private and group.</p>
             </a></li>
-        	<li><a href="#Calendar">
+        	<li><a href="#CalendarOfEvents">
             	<img src="images/guitar.jpg">
             	<h2>Calendar of Events</h2>
                 <p>What's happening locally.</p>
             </a></li>
-        	<li><a href="#">
+        	<li><a href="#Sales">
             	<img src="images/drums.JPG">
             	<h2>Sales</h2>
-                <p>Insturments, sheet music, parts.</p>
+                <p>Instruments, sheet music, parts.</p>
             </a></li>
-        	<li><a href="#">
+        	<li><a href="#Rentals">
             	<img src="images/clarinet.JPG">
             	<h2>Rentals</h2>
                 <p>Information about rental instruments for band and strings.</p>
@@ -54,7 +58,7 @@
             	<h2>FAQ</h2>
                 <p>Frequently asked questions and answers.</p>
             </a></li>
-            <li><a href="#StudentLogin">
+            <li><a href="#StudentLogin" data-rel="dialog">
             	<img src="images/violin.jpg">
             	<h2>Student Login</h2>
                 <p>Information for current students.</p>
@@ -81,81 +85,135 @@
             <h1>Send Us a Message</h1>
         </div>
         <div data-role="content">
-        <form method="get" action="">
-            <fieldset>
-    		    <label for="name">Your Name:</label>
-			    <input type="text" name="name" id="name" value="" placeholder="Your Name"/>
-                <label for="phone">Phone Number:</label>
-			    <input type="tel" name="phone" id="phone" value="" placeholder="Your Phone Number"/>
-			    <label for="email">Your email: </label>
-			    <input type="email" name="email" id="email" value="" placeholder="Your Email"/>
-            
-			    <label for="message">How can we help you?</label>
-            	<textarea id="message"></textarea>
-                <input type="submit" value="Submit" data-inline="true">
-                </fieldset>
-        </form>
+                    	<form name="contact" action="contact.php" method="post">
+                            			<label for="Sender">Your Name:</label>
+                                    	<input type="text" name="Sender" id="Sender" value="<?php echo $Sender; ?>" placeholder="Your Name"/>
+                                        
+                                        <label for="Phone">Phone Number:</label>
+			    						<input type="tel" name="Phone" id="Phone" value="<?php echo $Phone; ?>" placeholder="Your Phone Number">
+                             		    
+                                        <label for="Email">Your email: </label>
+                                		<input type="email" name="Email" id="Email" value="<?php echo $Email; ?>" placeholder="Your Email"/>
+                            	
+                            			<label for="Message">How can we help you?</label>
+            							<textarea name="Message" id="Message" cols="25"><?php echo $Message; ?></textarea>
+                                
+                           
+                            	<input type="reset" value="Clear Form" />
+                                &nbsp;
+                                &nbsp;
+                                <input type="submit" name="Submit" value="Send Form" />
+                    	</form>
+                        
+                    
         </div>
         <footer data-role="footer" class="ui-bar">We are happy to hear from you.</footer>
 </section>
-<section id="Map" data-role="page">
+<section id="Map" data-role="page" data-theme="a">
 <div data-role="header">
-            <h1>220 SW G ST<br />
-            Grants Pass, OR 97526</h1>
+	<h1>Store Information and Map</h1>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>  
         </div>
     <div data-role="content">
+    <h2>Great Northwest Music is located in the Town Center Plaza on G Street, in the heart of downtown Grants Pass.</h2>
+            <p>220 SW G Street Grants Pass, OR 97526 Phone: (541) 956-8600</p>
         <a href="http://maps.google.com/maps?rlz=1C1CHFX_enUS529US529&q=220+SW+G+Street+Grants+Pass,+OR+97526&um=1&ie=UTF-8&hq=&hnear=0x54c57a3b12d2f7e9:0xcfea777db4a85227,220+SW+G+St,+Grants+Pass,+OR+97526&gl=us&sa=X&ei=LB5_Ub-2Eo6PigLG7YGABA&ved=0CDAQ8gEwAA" rel="external"><img id="Map" src="https://maps.googleapis.com/maps/api/staticmap?center=220 SW G St, Grants Pass, OR&amp;zoom=15&amp;size=288x200&amp;markers=220 SW G St, Grants Pass, OR&amp;sensor=false"
         width="288" height="200"></a></div>
-        <footer data-role="footer" class="ui-bar"id="MapFooter">Hours:<br />Monday-Thursday: 10:00-6:00<br />Friday: 12:00-6:00<br />Saturday: 9:00-1:00<br />Sunday: Closed<br /><a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a></footer>
+        <footer data-role="footer" class="ui-bar"id="MapFooter">Hours:<br />Monday-Thursday: 10:00-1:00 and 2:00-6:00<br />Friday: 2:00-6:00<br />Saturday: 10:00-1:00<br />Sunday: Closed<br />
+        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+        <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a></footer>
+        
 </section> 
 <!--Lessons Page Begin -->
 <section data-role="page" data-theme="a" id="Lessons" class="ListViews">
-	<header data-role="header"><a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext" data-rel="back"></a></header>
-	<h2 id="banner"><p>Great Nortwest Music</p></h2>
+<a href="../public/index.php" data-role="button" data-inline="true" data-mini="true" data-ajax="false">View Full Site</a>
+		<h2 id="banner"><p>Great Northwest Music</p></h2><!--Banner area for Logo -->
+    <header data-role="header"><h2></h2>
+    	<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	  </header>
 	<div data-role="content">
-	
+    <p>Great Northwest Music Academy offers music classes and lessons for all ages from babies to senior adults.</p>
+    <p><a href="pdf/schedule.pdf" rel="external">Click here</a> to view our current class schedule.</p>
         <ul data-role="listview" data-inset="true">
-        	<li><a href="#Kindermusic">
-            	<img src="images/piano.JPG">
-            	<h2>Kindermusic</h2>
-                <p>Apple released iOS 6.1</p>
+        	<li><a href="#Accordion">
+            	<img src="images/accordian.JPG">
+            	<h2>Accordion</h2>            </a></li>
+        	<li><a href="#Banjo">
+            	<img src="images/banjo.JPG">
+            	<h2>Banjo</h2>
             </a></li>
-        	<li><a href="#PianoKeyboard">
+        	<li><a href="#Cello">
+            	<img src="images/cello.JPG">
+            	<h2>Cello</h2>
+          </a></li>
+        	<li><a href="#Clarinet">
+            	<img src="images/clarinet.JPG">
+            	<h2>Clarinet</h2>
+          </a>
+          <li><a href="#Drums">
             	<img src="images/drums.JPG">
-            	<h2>Piano and Keyboard</h2>
-                <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
+            	<h2>Drums</h2>
             </a></li>
-        	<li><a href="#Guitar">
+        	<li><a href="#Electric Bass">
+            	<img src="images/bass.JPG">
+            	<h2>Electric Bass</h2>
+            </a></li>
+        	<li><a href="#Flute">
+            	<img src="images/flute.jpg">
+            	<h2>Flute</h2>
+          </a></li>
+          <li><a href="#Guitar">
             	<img src="images/guitar.jpg">
             	<h2>Guitar</h2>
-                <p>Nokia rolls out WP 7.8 to Lumia 800</p>
             </a></li>
-        	<li><a href="#Vocal">
-            	<img src="images/voice.JPG">
-            	<h2>Vocal</h2>
-                <p>New Samsung Galaxy Express</p>
+            <li><a href="#HandPercussion">
+            	<img src="images/HandPercussion.JPG">
+            	<h2>Hand Percussion</h2>
             </a></li>
-        	<li><a href="#BandStrings">
-            	<img src="images/violin.jpg">
-            	<h2>Band and Strings</h2>
-                <p>Rumours about new full HD Nexus 7</p>
+            <li><a href="#Kindermusic">
+            	<img src="images/ourTime_t.jpg">
+            	<h2>Kindermusik</h2>
             </a></li>
-        	<li><a href="#Drums">
-            	<img src="images/viola.JPG">
-            	<h2>Drumming</h2>
-                <p>ZTE to launch Firefox OS smartphone at MWC</p>
+        	
+        	<li><a href="#Mandolin">
+            	<img src="images/mandolin.JPG">
+            	<h2>Mandolin</h2>
+            </a></li>
+        	<li><a href="#Organ">
+            	<img src="images/organ.JPG">
+            	<h2>Organ</h2>
+            </a></li>
+        	<li><a href="#Piano">
+            	<img src="images/piano.JPG">
+            	<h2>Piano</h2>
             </a></li>
         	<li><a href="#Recorder">
-            	<img src="images/flute.jpg">
+            	<img src="images/recorder.png">
             	<h2>Recorder</h2>
-                <p>First Samsung phones with Tizen can be expected in 2013</p>
+            </a></li>
+        	<li><a href="#Saxaphone">
+            	<img src="images/saxaphone.jpg">
+            	<h2>Saxophone</h2>
             </a></li>
         	<li><a href="#Songwriting">
-            	<img src="images/organ.JPG">
-            	<h2>Songwriting and Music Theory</h2>
-                <p>Nokia confirms the end of Symbian</p>
+            	<img src="images/songwriting.JPG">
+            	<h2>Song writing</h2>
             </a></li>
-        </ul>
+            <li><a href="#Ukelele">
+            	<img src="images/Ukulele.JPG">
+            	<h2>Ukulele</h2>
+          </a></li>
+          <li><a href="#Violin">
+            	<img src="images/violin.jpg">
+            	<h2>Violin</h2>
+          </a></li>
+          <li><a href="#Voice">
+            	<img src="images/voice.JPG">
+            	<h2>Voice</h2>
+            </a></li>
+            
+      </ul>
                 
     </div><!-- /content -->
     
@@ -168,17 +226,17 @@
 
 </section><!--Lessons Page End -->
 <!--Begin Individual Lesson Type Pages 9 total -->
-<section data-role="page" data-theme="a" id="Kindermusic">
+<section data-role="page" data-theme="a" id="Kindermusic" class="ListViews">
 
 	<div data-role="header">
-		<h1>Kindermusic</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-iconpos="notext" data-rel="back">Back</a>
-        <a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<h1>Kindermusik</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left"  data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <div data-role="content">
     
     <p>Kindermusik introduces your young child to the joy and adventure of music. From birth through age seven, with the caring guidance of our trained and licensed Kindermusik educators, your child can grow and learn through joyful musical experiences that foster music skills as well as promoting social, emotional, cognitive, language and physical development.</p>
-    <p>Instructors available for Kindermusic Lessons:</p>
+    <p>Instructors available for Kindermusik Lessons:</p>
      <ul data-role="listview" data-inset="true">
         	<li><a href="#Instructor1" data-rel="dialog">
             	<img src="images/female.png">
@@ -196,7 +254,7 @@
             	<img src="images/male.png">
             	<h2>Brian</h2>
                 <p>Nokia rolls out WP 7.8 to Lumia 800</p>
-                <p class="ui-li-aside">Brian's Scheduls</p>
+                <p class="ui-li-aside">Brian's Schedule</p>
             </a></li>
             </ul>
     </div>
@@ -206,46 +264,12 @@
         	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
         </footer>
 </section>
-<section data-role="page" data-theme="a" id="PianoKeyboard">
+<section data-role="page" data-theme="a" id="Accordion" class="ListViews">
 
 	<div data-role="header">
-		<h1>Piano and Keyboard</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-iconpos="notext" data-rel="back">Back</a>
-        <a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
-	</div><!-- /header -->
-    <div data-role="content">
-    
-    <p>We offer both classes and private piano/keyboard lessons for students from age 6 through adults. Often considered the best first instrument to learn, the piano or keyboard is laid out in
-such a way as to make understanding music easier. More
-</p>
-    <p>Instructors available for Piano and Keyboard lessons:</p>
-     <ul data-role="listview" data-inset="true">
-        	        	<li><a href="#Instructor10" data-rel="dialog">
-            	<img src="images/male.png">
-            	<h2>Andy</h2>
-                <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
-                <p class="ui-li-aside">Andy's Schedule</p>
-            </a></li>
-        	<li><a href="#Instructor11" data-rel="dialog">
-            	<img src="images/male.png">
-            	<h2>Alex</h2>
-                <p>Nokia rolls out WP 7.8 to Lumia 800</p>
-                <p class="ui-li-aside">Alex's Schedule</p>
-            </a></li>
-            </ul>
-    </div>
-        <footer data-role="footer" class="ui-bar">
-	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
-            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
-        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
-        </footer>
-</section>
-<section data-role="page" data-theme="a" id="Guitar">
-
-	<div data-role="header">
-		<h1>Guitar</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-iconpos="notext" data-rel="back">Back</a>
-        <a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<h1>Accordion</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <div data-role="content">
     
@@ -274,29 +298,30 @@ much of the popular music of our day.</p>
         	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
         </footer>
 </section>
-<section data-role="page" data-theme="a" id="Vocal">
+<section data-role="page" data-theme="a" id="Banjo" class="ListViews">
 
 	<div data-role="header">
-		<h1>Vocal</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-iconpos="notext" data-rel="back">Back</a>
-        <a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<h1>Banjo</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <div data-role="content">
     
-    <p>Our vocal program for singers from 8 year olds to adults offers an opportunity to sing a variety of music under the direction of an experienced voice teacher. We also offer private voice lessons.</p>
-    <p>Instructors available for Vocal Lessons:</p>
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
      <ul data-role="listview" data-inset="true">
-        	<li><a href="#Instructor7" data-rel="dialog">
-            	<img src="images/female.png">
-            	<h2>Kendra</h2>
-                <p>First Samsung phones with Tizen can be expected in 2013</p>
-                <p class="ui-li-aside">Kendra's Schedule</p>
-            </a></li>
-        	<li><a href="#Instructor8" data-rel="dialog">
+        	<li><a href="#Instructor4" data-rel="dialog">
             	<img src="images/male.png">
-            	<h2>Arleigh</h2>
-                <p>Nokia confirms the end of Symbian</p>
-                <p class="ui-li-aside">Arleigh's schedule</p>
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
             </a></li>
 
             </ul>
@@ -307,50 +332,32 @@ much of the popular music of our day.</p>
         	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
         </footer>
 </section>
-<section data-role="page" data-theme="a" id="BandStrings">
+<section data-role="page" data-theme="a" id="Cello" class="ListViews">
 
 	<div data-role="header">
-		<h1>Band and Strings</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-iconpos="notext" data-rel="back">Back</a>
-        <a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<h1>Cello</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <div data-role="content">
     
-    <p>Our band and string programs include ensembles for those who already play as well as classes for adult beginners and those who need a refresher to recover past music reading skills and
-improve their playing ability. The emphasis is on having fun and enjoying the social aspects of
-playing music. Private lessons are also available for students of all ages.</p>
-    <p>Instructors available for Band and Strings lessons:</p>
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
      <ul data-role="listview" data-inset="true">
-        	<li><a href="#Instructor1" data-rel="dialog">
-            	<img src="images/female.png">
-            	<h2>Maria</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula gravida magna. Phasellus at lobortis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                <p class="ui-li-aside">Maria's Schedule</p>
-            </a></li>
-        	<li><a href="#Instructor2" data-rel="dialog">
+        	<li><a href="#Instructor4" data-rel="dialog">
             	<img src="images/male.png">
-            	<h2>Bob</h2>
-                <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
-                <p class="ui-li-aside">Bob's schedule</p>
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
             </a></li>
-        	<li><a href="#Instructor3" data-rel="dialog">
+        	<li><a href="#Instructor5" data-rel="dialog">
             	<img src="images/male.png">
-            	<h2>Brian</h2>
-                <p>Nokia rolls out WP 7.8 to Lumia 800</p>
-                <p class="ui-li-aside">Brian's Scheduls</p>
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
             </a></li>
-            <li><a href="#Instructor6" data-rel="dialog">
-            	<img src="images/male.png">
-            	<h2>Don</h2>
-                <p>ZTE to launch Firefox OS smartphone at MWC</p>
-                <p class="ui-li-aside">Don's Schedule</p>
-            </a></li>
-        	<li><a href="#Instructor7" data-rel="dialog">
-            	<img src="images/female.png">
-            	<h2>Kendra</h2>
-                <p>First Samsung phones with Tizen can be expected in 2013</p>
-                <p class="ui-li-aside">Kendra's Schedule</p>
-            </a></li>
+
             </ul>
     </div>
         <footer data-role="footer" class="ui-bar">
@@ -359,12 +366,46 @@ playing music. Private lessons are also available for students of all ages.</p>
         	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
         </footer>
 </section>
-<section data-role="page" data-theme="a" id="Drums">
+<section data-role="page" data-theme="a" id="Clarinet" class="ListViews">
 
 	<div data-role="header">
-		<h1>Drumming</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-iconpos="notext" data-rel="back">Back</a>
-        <a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<h1>Clarinet</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor4" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Drums" class="ListViews">
+
+	<div data-role="header">
+		<h1>Drums</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left"data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <div data-role="content">
     
@@ -394,12 +435,284 @@ and other world percussion instruments.
         	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
         </footer>
 </section>
-<section data-role="page" data-theme="a" id="Recorder">
+<section data-role="page" data-theme="a" id="Electric Bass" class="ListViews">
+
+	<div data-role="header">
+		<h1>Electric Bass</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left"data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor4" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Flute" class="ListViews">
+
+	<div data-role="header">
+		<h1>Flute</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor4" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Guitar" class="ListViews">
+
+	<div data-role="header">
+		<h1>Guitar</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left"  data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor4" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="HandPercussion" class="ListViews">
+
+	<div data-role="header">
+		<h1>Hand Percussion</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor4" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Kindermusik" class="ListViews">
+
+	<div data-role="header">
+		<h1>Kindermusik</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor4" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Mandolin" class="ListViews">
+
+	<div data-role="header">
+		<h1>Mandolin</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor4" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Organ" class="ListViews">
+
+	<div data-role="header">
+		<h1>Organ</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor4" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Piano" class="ListViews">
+
+	<div data-role="header">
+		<h1>Piano</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>We offer both classes and private piano lessons for students from age 6 through adults. Often considered the best first instrument to learn, the piano or keyboard is laid out in
+such a way as to make understanding music easier. More
+</p>
+    <p>Instructors available for Piano and Keyboard lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor10" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Andy</h2>
+                <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
+                <p class="ui-li-aside">Andy's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor11" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Alex</h2>
+                <p>Nokia rolls out WP 7.8 to Lumia 800</p>
+                <p class="ui-li-aside">Alex's Schedule</p>
+            </a></li>
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Recorder" class="ListViews">
 
 	<div data-role="header">
 		<h1>Recorder</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-iconpos="notext" data-rel="back">Back</a>
-        <a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <div data-role="content">
     
@@ -411,7 +724,7 @@ and other world percussion instruments.
             	<img src="images/male.png">
             	<h2>Brian</h2>
                 <p>Nokia rolls out WP 7.8 to Lumia 800</p>
-                <p class="ui-li-aside">Brian's Scheduls</p>
+                <p class="ui-li-aside">Brian's Schedule</p>
             </a></li>
         	<li><a href="#Instructor4" data-rel="dialog">
             	<img src="images/male.png">
@@ -428,18 +741,52 @@ and other world percussion instruments.
         	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
         </footer>
 </section>
-<section data-role="page" data-theme="a" id="Songwriting">
+<section data-role="page" data-theme="a" id="Saxaphone" class="ListViews">
 
 	<div data-role="header">
-		<h1>Songwriting and Music Theory</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-iconpos="notext" data-rel="back">Back</a>
-        <a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<h1>Saxophone</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor4" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Songwriting" class="ListViews">
+
+	<div data-role="header">
+		<h1>Song writing</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <div data-role="content">
     
     <p>These classes for teens and adults provide an opportunity to learn to write songs, put your songs into standard music notation, read music or expand your understanding of the building blocks
 of music--scales, chords and the circle of fifths.</p>
-    <p>Instructors available for Songwriting and Music Theory Lessons:</p>
+    <p>Instructors available for Song writing and Music Theory Lessons:</p>
      <ul data-role="listview" data-inset="true">
         	<li><a href="#Instructor9" data-rel="dialog">
             	<img src="images/female.png">
@@ -467,10 +814,132 @@ of music--scales, chords and the circle of fifths.</p>
         	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
         </footer>
 </section>
+<section data-role="page" data-theme="a" id="Ukelele" class="ListViews">
+
+	<div data-role="header">
+		<h1>Ukulele</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our classes and lessons for ages 8 to adult introduce beginners to a wide variety of styles. Guitar is one of our most requested classes, probably because this instrument is played in so
+much of the popular music of our day.</p>
+    <p>Instructors available for Guitar Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor4" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Steve</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Steve's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor5" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Darryl</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Darryl's Schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Violin" class="ListViews">
+
+	<div data-role="header">
+		<h1>Violin</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our band and string programs include ensembles for those who already play as well as classes for adult beginners and those who need a refresher to recover past music reading skills and
+improve their playing ability. The emphasis is on having fun and enjoying the social aspects of
+playing music. Private lessons are also available for students of all ages.</p>
+    <p>Instructors available for Band and Strings lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor1" data-rel="dialog">
+            	<img src="images/female.png">
+            	<h2>Maria</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula gravida magna. Phasellus at lobortis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <p class="ui-li-aside">Maria's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor2" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Bob</h2>
+                <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
+                <p class="ui-li-aside">Bob's schedule</p>
+            </a></li>
+        	<li><a href="#Instructor3" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Brian</h2>
+                <p>Nokia rolls out WP 7.8 to Lumia 800</p>
+                <p class="ui-li-aside">Brian's Schedule</p>
+            </a></li>
+            <li><a href="#Instructor6" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Don</h2>
+                <p>ZTE to launch Firefox OS smartphone at MWC</p>
+                <p class="ui-li-aside">Don's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor7" data-rel="dialog">
+            	<img src="images/female.png">
+            	<h2>Kendra</h2>
+                <p>First Samsung phones with Tizen can be expected in 2013</p>
+                <p class="ui-li-aside">Kendra's Schedule</p>
+            </a></li>
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Voice" class="ListViews">
+
+	<div data-role="header">
+		<h1>Voice</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Our vocal program for singers from 8 year olds to adults offers an opportunity to sing a variety of music under the direction of an experienced voice teacher. We also offer private voice lessons.</p>
+    <p>Instructors available for Vocal Lessons:</p>
+     <ul data-role="listview" data-inset="true">
+        	<li><a href="#Instructor7" data-rel="dialog">
+            	<img src="images/female.png">
+            	<h2>Kendra</h2>
+                <p>First Samsung phones with Tizen can be expected in 2013</p>
+                <p class="ui-li-aside">Kendra's Schedule</p>
+            </a></li>
+        	<li><a href="#Instructor8" data-rel="dialog">
+            	<img src="images/male.png">
+            	<h2>Arleigh</h2>
+                <p>Nokia confirms the end of Symbian</p>
+                <p class="ui-li-aside">Arleigh's schedule</p>
+            </a></li>
+
+            </ul>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+
+
+
 <!--End of Individual Lesson Pages -->
 <!--Instructor Page Begin page not used, uncomment to use, listview of all intructors linking to individual pages for each with schedules-->
 <!-- <section data-role="page" data-theme="a" id="Instructors" class="ListViews">
-	<header data-role="header"><a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext" data-rel="back"></a></header>
+	<header data-role="header"><a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext" data-rel="back"></a></header>
 	<h2 id="banner"><p>Great Nortwest Music</p></h2>
 	<div data-role="content">
 	
@@ -557,7 +1026,7 @@ of music--scales, chords and the circle of fifths.</p>
 <section data-role="dialog" data-theme="a" id="Instructor1">
 	<div data-role="header">
 		<h1>Maria</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -578,7 +1047,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Bob</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -599,7 +1068,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Brian</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -620,7 +1089,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Steve</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -641,7 +1110,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Darryl</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -662,7 +1131,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Don</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -683,7 +1152,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Kendra</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -704,7 +1173,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Arleigh</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -725,7 +1194,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Amy</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -737,7 +1206,7 @@ of music--scales, chords and the circle of fifths.</p>
                 <div class="ui-block-c"><p>Saturday</p></div>
             </div>
         <footer data-role="footer" class="ui-bar">
-	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a> 
             <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
         	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
         </footer>
@@ -746,7 +1215,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Andy</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -767,7 +1236,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Alex</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
 	</div><!-- /header -->
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at neque massa, et molestie tortor. Duis iaculis lorem id nisl tincidunt ac viverra nulla mattis.</p>
     <div class="ui-grid-b">
@@ -785,8 +1254,12 @@ of music--scales, chords and the circle of fifths.</p>
         </footer>
 </section>
 <section data-role="page" data-theme="a" id="FAQ" class="ListViews">
-	<header data-role="header"><a href="index.html" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home" data-iconpos="notext" >Home</a></header>
-	<h2 id="banner"><p>Great Nortwest Music</p></h2>
+	<h2 id="banner"><p>Great Northwest Music</p></h2><!--Banner area for Logo -->
+    <header data-role="header"><h2></h2>
+    	<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	  </header>
+	
 	<div data-role="content">
 	
         <ul data-role="listview" data-inset="true">
@@ -846,7 +1319,7 @@ of music--scales, chords and the circle of fifths.</p>
 <section data-role="page" data-theme="a" id="Answer1">
 	<div data-role="header">
 		<h1>What size of guitar should I buy for my child?</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <p>If you have access to try out different guitar sizes, look for the largest one that allows the student to play a full G chord without touching any of the open strings with the left hand (ask someone who plays the guitar to help you test this). The student also should be able to see where to put the left hand fingers without having to turn the guitar up for a better look.</p> 
 
@@ -884,9 +1357,9 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>What are the differences between classical, acoustic and electric guitars?</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
-    <p>Classical guitars have nylon strings with wider necks that allow the strings to be farther apart to facilitate fingerpicking.  They usually do not have a strap button on the bottom and often have decorative artwork around the sound hole.  Classical guitars are traditionally used to play classical, Flamenco, and folk music.  They have a mellow sound. Note that it is not recommended to put steel strings on a classical guitar, since the neck is not reinforced to hold the stronger pull of the steel strings.</p>
+    <p>Classical guitars have nylon strings with wider necks that allow the strings to be farther apart to facilitate finger picking.  They usually do not have a strap button on the bottom and often have decorative artwork around the sound hole.  Classical guitars are traditionally used to play classical, Flamenco, and folk music.  They have a mellow sound. Note that it is not recommended to put steel strings on a classical guitar, since the neck is not reinforced to hold the stronger pull of the steel strings.</p>
 
 <p>Acoustic guitars have steel strings with a narrower neck than a classical guitar.  They generally have a strap button on the bottom and a pick guard under the sound hole.  Acoustic guitars have a brighter sound than the classical guitar and are used to play country and folk music as well as many other styles of popular music.  Acoustic guitars may be amplified using an added pick-up; acoustic-electric guitars have the pick-up designed as an integral part of the guitar.</p>
 
@@ -901,7 +1374,7 @@ of music--scales, chords and the circle of fifths.</p>
 
 	<div data-role="header">
 		<h1>Should a beginner learn on a classical, acoustic or electric guitar?</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <p>A beginner may start on either a classical, acoustic or electric guitar.  All three guitars are available in 1/4, 1/2, 3/4 and full sizes.  There are advantages and disadvantages for each type (see table below), and the student should weigh them to decide which one will fit his personality, learning style, and music goals.</p>
                     
@@ -945,7 +1418,7 @@ An amplifier is required, making the guitar less portable.<p>If the student pref
 <section data-role="page" data-theme="a" id="Answer4">
 	<div data-role="header">
 		<h1>How old does a child have to be to begin lessons?</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <p>Adults can begin learning an instrument at any time.  In fact, many people invest the time during their retirement years to learn a musical instrument!</p>  
                     <p>For children, starting at the right age is a key element of success.  Children put into lessons too soon may feel overwhelmed and frustrated and want to stop lessons. A child who is driven to learn may be an exception to the starting ages given below if taught by the right teacher.  Children older than the suggested earliest starting age usually do very well.</p>  
@@ -965,9 +1438,9 @@ An amplifier is required, making the guitar less portable.<p>If the student pref
 <section data-role="page" data-theme="a" id="Answer5">
 	<div data-role="header">
 		<h1>Are keyboard lessons and classes the same as piano?</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
-    <p>The most noticeable difference between a keyboard and a piano for the beginning student is the strength needed in the fingers to push down the keys; the learning process is the same.  We use electronic keyboards in our keyboard classroom and one digital piano which has weighted keys that require the same strenth to play as an acoustic piano.</p>
+    <p>The most noticeable difference between a keyboard and a piano for the beginning student is the strength needed in the fingers to push down the keys; the learning process is the same.  We use electronic keyboards in our keyboard classroom and one digital piano which has weighted keys that require the same strength to play as an acoustic piano.</p>
                     <p>The type of instrument used once a week for classes is less important than the student's practice instrument.  Students who have a piano to practice on at home will develop the finger strength needed to play the piano.  Students who practice on a piano at home are welcome to play on our digital piano during classes. Please let us know if you would like your child to play on the digital piano in class.  If we have more than one request, we will rotate those students on the piano on a weekly basis.</p>
         <footer data-role="footer" class="ui-bar">
 	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
@@ -979,7 +1452,7 @@ An amplifier is required, making the guitar less portable.<p>If the student pref
 
 	<div data-role="header">
 		<h1>Is it better for a child to take classes or private lessons?</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <p>If your child has take lessons previously, private lessons are required.  However, if your child is an absolute beginner, you have the option to begin in a class.  There are advantages to each approach.</p> 				<p>In a class students learn in a social atmosphere where they may be motivated by the group to practice.  Learning with others also tends to make simple beginning concepts more interesting.</p>
                     <p>In addition, classes require students to learn to play in unison with others, which aids tremendously in learning to keep a steady beat while playing and learning to play songs from beginning to end without pausing or stopping.  This ability to play in ensemble is something that private students do not always attain.</p>  
@@ -994,7 +1467,7 @@ An amplifier is required, making the guitar less portable.<p>If the student pref
 <section data-role="page" data-theme="a" id="Answer7">
 	<div data-role="header">
 		<h1>Can a student join a class once it has already started?</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <p><strong>Kindermusik classes: </strong> Except for Kindermusik for the Young Child, new students may join Kindermusik classes at any time (unless they are full).  For Kindermusik for the Young Child, we only accept new students in the first four weeks in the fall semester or in the first week of the second semester.</p>
                     <p><strong>Musical Instrument Classes:</strong>  We accept new students in these classes only during the first 2 weeks of the class.  Classes may begin in September, February or June/July. </p>
@@ -1012,7 +1485,7 @@ An amplifier is required, making the guitar less portable.<p>If the student pref
 
 	<div data-role="header">
 		<h1>Do students have opportunities to perform?</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <p><strong>Kindermusik classes: </strong> These classes provide an introduction to music without the pressure of performance, so students do not perform.</p>
                     <p><strong>Ensembles: </strong> Ensembles perform at various community venues throughout the year, on the small stage at our store several times in the year, at our Holiday Music Night and also at our annual Spring Recital.</p>
@@ -1028,7 +1501,7 @@ An amplifier is required, making the guitar less portable.<p>If the student pref
 
 	<div data-role="header">
 		<h1>What is an Apprentice Teacher?</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
     <p>An apprentice teacher is an advanced music student who has been recommended to us by their instrumental or vocal teacher, and many have teaching experience gained through assisting music teachers in local elementary and middle schools.  Young beginning students look up to these high school and college age students and have great respect for them.  This helps motivate the students to practice and excel in their lessons.  Apprentice teachers teach under the guidance of a master teacher.</p>
      <footer data-role="footer" class="ui-bar">
@@ -1041,7 +1514,7 @@ An amplifier is required, making the guitar less portable.<p>If the student pref
 
 	<div data-role="header">
 		<h1>What are the qualifications of your Master Teachers?</h1>
-		<a href="index.html" data-shadow="false" data-iconshadow="false" data-icon="home" data-iconpos="notext">Home</a>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
 	</div><!-- /header -->
 	<p>All of our master teachers have a music degree from a college or university or they have extensive experience teaching and/or performing experience.  In addition, we carefully select teachers who demonstrate caring attitudes toward their students.  We believe that a positive, caring relationship between the teacher and the student is a critical aspect of the learning process.</p>
 	<footer data-role="footer" class="ui-bar">
@@ -1049,6 +1522,141 @@ An amplifier is required, making the guitar less portable.<p>If the student pref
             <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
         	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
 	</footer>
+</section>
+<section data-role="page" data-theme="a" id="Sales">
+
+	<div data-role="header">
+		<h1>Sales</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    
+    <p>Visit our store today for a variety of instruments and music accessories.</p>
+     <div data-role="collapsible-set">
+                <div data-role="collapsible" data-collapsed="true">
+                    <h1>Retail Sales</h1>
+                    <p>Need some content here from Andy.</p>
+                </div>
+                <div data-role="collapsible">
+                    <h1>Consignments</h1>
+                    <p>Need some content here from Andy</p>
+                </div>
+     </div>
+    </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="Rentals">
+
+	<div data-role="header">
+		<h1>Instrument Rentals</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    <p>Great Northwest Music offers the best band and string instrument rental program in the Rogue Valley. Both Rent-to-Own and Rent Only plans are available. Our quality beginner instruments have been approved by local band and string teachers, and we also carry all the books and supplies required. Stop in to rent your instrument at our store located in the Town Center Plaza at 5th and G Streets.</p>
+    <p><a href="pdf/rentalflyer.pdf" rel="external">Click here</a> for more information abuot rental instruments. (This is a pdf file and may not be viewable on your mobile device)</p>
+    <div data-role="collapsible-set">
+    <div data-role="collapsible" data-collapsed="true">
+        <h3>Rent to own</h3>
+        <ul>
+            <li>100% of&nbsp;the rental portion of your monthly payment&nbsp;applies to the purchase of your instrument for as long as you rent (other plans in our area limit to 50% after the first year).</li>
+            <li>Money&nbsp;paid toward purchase&nbsp;in your first instrument is applied to all exchanges.</li>
+            <li>100% of your earned credit may be used toward purchase of a higher quality step-up instrument.</li>
+       </ul>
+    </div>
+    <div data-role="collapsible" data-collapsed="true">
+        <h3>Great Value</h3>
+        <ul>
+             <li>Free use of music stand.</li>
+             <li>Free ID tag for your instrument case.</li>
+             <li>Standard Maintenance and Repair Plan included.</li>
+             <li>Free loaner instrument if yours is in for maintenance or repair.</li>
+       </ul>
+    </div>
+    <div data-role="collapsible" data-collapsed="true">
+        <h3>Flexible</h3>
+        <ul>
+             <li>Choose the Rent to Own Plan or the Rent Only option.</li>
+             <li>Exchange for a different instrument or a different size at any time.</li>
+             <li>No obligation - return your instrument at any time to end your contract.</li>
+             <li>Optional Damage Coverage&nbsp;and&nbsp;Replacement Coverage plans&nbsp;available.</li>
+       </ul>
+    </div>
+    <div data-role="collapsible" data-collapsed="true">
+        <h3>Easy and convenient</h3>
+        <ul>
+             <li>We stay in contact with local band and string teachers and know what they require.</li> 
+             <li>All books and supplies on your band director's list are available through our store.</li> 
+             <li>We care about you and your child and do everything we can to make it easy and fun to get started on this great musical journey!</li>
+       </ul>
+    </div>
+</div>
+</div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="StudentLogin">
+	<div data-role="header">
+		<h1>Student Login</h1>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    	<form method="post" action="../public/login-register.php" data-ajax="false">
+			<p>
+				<label for="email">Email:</label>
+				<input type="email" name="email" size="15">
+				<input type="hidden" name="return" value="mobile" />
+			</p>
+			<p>
+				<label for="password">Password:</label>
+				<input type="password" name="password" size="15">
+			</p>
+			<p>
+				<input type="reset" value="Cancel">
+				<input type="submit" name="login" value="Log In">
+			</p>
+		</form>
+     </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
+</section>
+<section data-role="page" data-theme="a" id="CalendarOfEvents">
+	<div data-role="header">
+		<h2>Upcoming Local Events</h2>
+		<a href="index.php" data-shadow="false" data-iconshadow="false" data-icon="arrow-left" data-rel="back">Back</a>
+        <a href="index.php" data-role="button" data-inline="true" data-iconshadow="false" data-icon="home">Home</a>
+	</div><!-- /header -->
+    <div data-role="content">
+    	<h3>APRIL 7th</h3>
+            <p>&quot;UNITY AND ONENESS&quot;<br>
+            Musical Guest: Debbie Voltura<br></p>
+            <h3>APRIL 14th</h3>
+            <p>&quot;God's Grace&quot;<br>
+            Musical Guest:Faith Rivera<br></p>
+            <h3>APRIL 21st</h3>
+            <p>&quot;THE CREATIVE USE OF IMAGINATION&quot;<br>
+            Musical Guest: Kris Shelton<br>
+            Special Guest&quot; Bob Deaton<br></p>
+            <h3>APRIL 28th</h3>
+            <p>&quot;BE STILL AND KNOW&quot;<br>
+            Musical Guest: Gino Walker<br></p>
+     </div>
+        <footer data-role="footer" class="ui-bar">
+	        <a href="#phone" data-rel="dialog" data-role="button" data-inline="true" data-icon="phone">Call</a>
+            <a href="#contact" data-rel="dialog" data-role="button" data-inline="true" data-icon="envelope">E-Mail</a>
+        	<a href="#Map" data-rel="dialog" data-role="button" data-inline="true" data-icon="map-marker">Map</a>
+        </footer>
 </section>
 </body>
 </html>
