@@ -8,6 +8,13 @@
 * http://jquery.org/license
 *
 */
+.ui-header .ui-title, .ui-footer .ui-title {
+
+margin-left: 0;
+margin-right: 0;
+   /* text-overflow:visble;  */ /* -Uncomment - to disable Ellipsis completely use with Caution- !*/ 
+
+}
 
 
 /* Swatches */
@@ -56,12 +63,13 @@
 	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #ffffff /*{a-body-shadow-color}*/;
 	background-color: transparent;
 	background-image: url(../images/sidebar_background_mobilepwide.jpg);
-	background-repeat: repeat-y;
+	background-repeat: repeat;
+	width: 100%;
 }
 .ui-overlay-a {
 	background-color: transparent;
 	background-image: url(../images/sidebar_background_mobilepwide.jpg);
-	background-repeat: repeat-y;
+	background-repeat: repeat;
 }
 .ui-body-a,
 .ui-body-a input,

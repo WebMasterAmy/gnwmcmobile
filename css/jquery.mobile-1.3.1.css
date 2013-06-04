@@ -881,7 +881,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 /*headers, content panels*/
 .ui-bar, .ui-body { position: relative; padding: .4em 15px; overflow: hidden; display: block; clear:both; }
 .ui-bar { font-size: 16px; margin: 0; }
-.ui-bar h1, .ui-bar h2, .ui-bar h3, .ui-bar h4, .ui-bar h5, .ui-bar h6 { margin: 0; padding: 0; font-size: 16px; display: inline-block; }
+.ui-bar h1, .ui-bar h2, .ui-bar h3, .ui-bar h4, .ui-bar h5, .ui-bar h6 { margin: 0; padding: 0; font-size: 16px; display: inline-block; white-space:normal;}
 .ui-header, .ui-footer { position: relative; zoom: 1; }
 .ui-mobile .ui-header, .ui-mobile .ui-footer { border-left-width: 0; border-right-width: 0; }
 .ui-header .ui-btn-left,
@@ -2106,6 +2106,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 .ui-popup > h5,
 .ui-popup > h6 {
 	margin: .5em 7px;
+	white-space:normal;
 }
 .ui-popup > span {
 	display: block;
@@ -2125,6 +2126,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 .ui-popup-container .ui-content > h5,
 .ui-popup-container .ui-content > h6 {
 	margin: .5em 0;
+	white-space:normal;
 }
 .ui-popup-container .ui-content > span {
 	margin: 0;

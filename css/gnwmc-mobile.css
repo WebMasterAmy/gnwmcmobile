@@ -1,21 +1,14 @@
 @charset "utf-8";
 
 /* CSS Document */
-body .ui-footer .ui-header {
+body .ui-footer .ui-header, ui-h2, ui-h1{
 	
  white-space: normal;
  }
-
-body {
-	background-color: transparent;
-	background-image: url(../images/sidebar_background_mobilepwide.jpg);
-	background-repeat: repeat;
-	width: 100%;	
-	}
 #FAQ div h1 {
 	white-space: normal;
 }
-h2#banner {
+#banner {
 	margin-right: auto;
 	margin-left: auto;
 	width: 200px;
@@ -26,7 +19,7 @@ h2#banner {
 	background-position: left 10px;
 	height: 120px;
 }
-.landscape h2#banner {
+.landscape #banner {
 	width:362px;
 	height:182px;
 	text-indent:-9999px;
@@ -50,4 +43,8 @@ footer {
 p {
 	margin-left: 8px;
 	margin-right: 8px;
+}
+
+#StudentLoggedIn div dd li {
+	list-style-type: none;
 }

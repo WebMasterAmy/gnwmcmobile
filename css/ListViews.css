@@ -112,8 +112,9 @@
 	/* Semi transparent background and different position if there is a thumb */
 	.ui-listview .ui-li-has-thumb .ui-li-heading,
 	.ui-listview .ui-li-has-thumb .ui-li-desc {
-		background: #111;
-		background: rgba(0,0,0,.8);
+		background: #6c5e44;
+		color:#FFFFFF;
+		opacity:0.8;
 		-webkit-background-clip: padding;
 		background-clip: padding-box;
 	}
@@ -131,6 +132,9 @@
 	}
 	/* ui-li-aside has class .ui-li-desc as well so we have to override some things. */
 	.ListViews .ui-listview .ui-li-desc.ui-li-aside {
+		background: #6c5e44;
+		color:#FFFFFF;
+		opacity:0.8;
 		padding: 2px 10px;
 		width: auto;
 		min-height: 0;
@@ -138,9 +142,6 @@
 		left: auto;
 		bottom: auto;
 		/* Custom styling. */
-		color: #c0c0c0;
-		background: #990099;
-		background: rgba(153,0,153,.85);
 		-webkit-border-top-right-radius: inherit;
 		border-top-right-radius: inherit;
 		-webkit-border-bottom-left-radius: inherit;
@@ -193,4 +194,10 @@
 }
 #Lessons div ul li a h2 {
 	white-space: normal;
+}
+h2 {
+	white-space:normal;
+}
+h1 {
+	white-space:normal;
 }
